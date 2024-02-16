@@ -37,3 +37,27 @@ view_student_list(){
         echo "No students found!"
     fi
 }
+
+
+
+# Applivation MENU
+
+while true; do
+    echo "Choose an option:"
+    echo "1. Create student record"
+    echo "2. View all students"
+    echo "3. Delete student record (by Student ID)"
+    echo "4. Update student record (by Student ID)"
+    echo "5. Exit the application"
+    read -p "Enter your choice:" choice
+
+    case $choice in
+	1) create_student_record ;;
+	2) view_student_list ;;
+	3) delete_student_record ;;
+	4) update_student_record ;;
+	5) exiting_application ;;
+	*) echo "Invalid option."
+
+    esac
+done
