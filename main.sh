@@ -24,3 +24,16 @@ create_student_record(){
         echo "Student with ID $id recorded successfully."
     fi
 }
+
+# b.Function to view all students in file
+
+view_student_list(){
+    if [ -s "students-list_1023.txt" ]; then
+        echo "List of all students"
+        echo "ID  | Email                 | Age"
+        echo "----|-----------------------|----"
+        awk -F ", " '{printf "%-4s| %-23s| %-3s\n", $1, $2, $3}' students-list_1023.txt
+    else
+        echo "No students found!"
+    fi
+}
