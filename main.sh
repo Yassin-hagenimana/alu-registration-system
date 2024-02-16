@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# question 1 
+# question 1 : Application for registeration of students at alu university using shell programming
 
 # a.Function to create student record
 
@@ -105,7 +105,7 @@ while true; do
 	3) delete_student_record ;;
 	4) update_student_record ;;
 	5) exiting_application ;;
-	*) echo "Invalid option."
+	*) echo "Invalid choice."
 
     esac
 done
