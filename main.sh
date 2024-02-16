@@ -32,7 +32,7 @@ view_student_list(){
         echo "List of all students"
         echo "ID  | Email                   | Age"
         echo "----|-------------------------|----"
-        awk -F ", " '{printf "%-4s| %-23s| %-3s\n", $1, $2, $3}' students-list_1023.txt
+        awk -F ". " '{printf "%-4s| %-23s| %-3s\n", $1, $2, $3}' students-list_1023.txt
     else
         echo "No students found!"
     fi
@@ -54,6 +54,31 @@ read id
     fi
 }
 
+
+# d.Function to update a student record by ID
+
+update_student_record() {
+    echo "Enter student ID to update:"
+    read update_id
+
+    # Check if ID exists before updating
+    if grep -q "^$update_id," students-list_1023.txt; then
+        echo "Enter updated email:"
+        read updated_email
+        echo "Enter updated age:"
+        read updated_age
+
+        # Using awk to search for the student record by ID and update it
+        awk -v id="$update_id" -v email="$updated_email" -v age="$updated_age" 'BEGIN {FS = ", "} $1 == id {$1 = id; $2 = email; $3 = age; printf "%s, %s, %s\n", $1, $2, $3; next} {print}' students-list_1023.txt > temp.txt
+
+        # Rename temp.txt to students-list_1023.txt
+        mv temp.txt students-list_1023.txt
+
+        echo "Student with ID $update_id updated successfully."
+    else
+        echo "Student with ID $update_id is not found!"
+    fi
+}
 
 
 # Applivation MENU
