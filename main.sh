@@ -25,14 +25,14 @@ create_student_record(){
     fi
 }
 
-# b.Function to view all students in file
-
+# b.Function to view all students from students-list_1023.txt file
 view_student_list(){
     if [ -s "students-list_1023.txt" ]; then
         echo "List of all students"
-        echo "ID  | Email                   | Age"
-        echo "----|-------------------------|----"
-        awk -F ". " '{printf "%-4s| %-23s| %-3s\n", $1, $2, $3}' students-list_1023.txt
+        echo "ID      | Email                            | Age"
+        echo "========|==================================|===========" 
+        awk -F ". " '{printf "%-4s    | %-23s      | %-3s\n", $1, $2, $3}' students-list_1023.txt 
+        echo "========|==================================|=========== "
     else
         echo "No students found!"
     fi
@@ -48,9 +48,9 @@ read id
 # Check if ID exists before deletion
     if grep -q "^$id," students-list_1023.txt; then
         sed -i "/^$id,/d" students-list_1023.txt
-        echo "Student with ID $id deleted successfully."
+        echo "Student with ID $id has been deleted successfully."
     else
-        echo "Student with ID $id is not found!"
+        echo "Student with ID $id does not exist."
     fi
 }
 
@@ -69,14 +69,14 @@ update_student_record() {
         read updated_age
 
         # Using awk to search for the student record by ID and update it
-        awk -v id="$update_id" -v email="$updated_email" -v age="$updated_age" 'BEGIN {FS = ", "} $1 == id {$1 = id; $2 = email; $3 = age; printf "%s, %s, %s\n", $1, $2, $3; next} {print}' students-list_1023.txt > temp.txt
+        awk -v id="$update_id" -v email="$updated_email" -v age="$updated_age" 'BEGIN {FS = ", "} $1 == id {$1 = id; $2 = email; $3 = age; printf "%s, %s, %s\n", $1, $2, $3; next} {print}' students-list_1023.txt > temporary_file.txt
 
-        # Rename temp.txt to students-list_1023.txt
-        mv temp.txt students-list_1023.txt
+        # Rename temporary_file.txt to students-list_1023.txt
+        mv temporary_file.txt students-list_1023.txt
 
-        echo "Student with ID $update_id updated successfully."
+        echo "Student with ID $update_id has been updated successfully."
     else
-        echo "Student with ID $update_id is not found!"
+        echo "Student with ID $update_id does not exixt."
     fi
 }
 
@@ -84,7 +84,7 @@ update_student_record() {
 # e.Function to exit the application
 
 exiting_application() {
-    echo "Thank you for using the application in registeration"
+    echo "Thank you for using the application in registeration process."
     exit 0
 }
 
