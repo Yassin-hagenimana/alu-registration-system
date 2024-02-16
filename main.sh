@@ -81,6 +81,13 @@ update_student_record() {
 }
 
 
+# e.Function to exit the application
+
+exiting_application() {
+    echo "Thank you for using the application in registeration"
+    exit 0
+}
+
 # Applivation MENU
 
 while true; do
