@@ -30,11 +30,27 @@ create_student_record(){
 view_student_list(){
     if [ -s "students-list_1023.txt" ]; then
         echo "List of all students"
-        echo "ID  | Email                 | Age"
-        echo "----|-----------------------|----"
+        echo "ID  | Email                   | Age"
+        echo "----|-------------------------|----"
         awk -F ", " '{printf "%-4s| %-23s| %-3s\n", $1, $2, $3}' students-list_1023.txt
     else
         echo "No students found!"
+    fi
+}
+
+
+# c.Function to delete a student record by ID
+
+delete_student_record(){
+echo "Enter student ID to delete:"
+read id
+
+# Check if ID exists before deletion
+    if grep -q "^$id," students-list_1023.txt; then
+        sed -i "/^$id,/d" students-list_1023.txt
+        echo "Student with ID $id deleted successfully."
+    else
+        echo "Student with ID $id is not found!"
     fi
 }
 
