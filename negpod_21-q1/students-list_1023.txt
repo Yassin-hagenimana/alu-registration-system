@@ -5,3 +5,5 @@
 5, aaronwilson@alustudent.com, 23
 6, uwanagibson@alustudent.com, 18
 7, florenceiradukunda3@alustuddnt.com, 21
+8, d.dushime@alustudent.com, 30
+9, p.mahoro@alustudent.com, 50
