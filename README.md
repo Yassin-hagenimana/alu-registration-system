@@ -4,7 +4,7 @@
 
 ## When the main.sh file runs
 
-
+## creation of the codes of coding negpod
 
 ## Creating student records
 
