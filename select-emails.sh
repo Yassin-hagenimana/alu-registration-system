@@ -3,7 +3,7 @@
 # Extracts lines containing email addresses
 grep -oP '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b' students-list_1023.txt > temp.txt
 
-# Checks if any emails were extracted
+# Checks if any emails were  extracted.
 if [ -s temp.txt ]; then
   # Extracts email addresses from the temp file
   grep -oP '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b' students-list_1023.txt | sort > student-emails.txt
@@ -13,4 +13,4 @@ else
 fi
 
 
-rm temp.txt 2>/dev/null
+rm temp.txt 2>/dev/null 
