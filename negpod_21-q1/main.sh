@@ -1,6 +1,7 @@
 #!/bin/bash
-
 # question 1 : Application for registeration of students at alu university using shell programming
+
+
 
 # a.Function to create student record
 

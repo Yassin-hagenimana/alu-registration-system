@@ -11,3 +11,5 @@
 11, angeloerike@gmail.com, 23
 12, umwarialice@gmail.com, 34
 13, manishimwepascaline@gmail.com, 17
+8, d.dushime@alustudent.com, 30
+9, p.mahoro@alustudent.com, 50
