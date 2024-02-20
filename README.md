@@ -7,7 +7,7 @@
 (Kindly ignore the plus sign when copying the text)
 
 2) On your terminal:
-+ cd alu-registration-system
++ cd negpod_21-q1
 
 3) list your files 
 + ls
