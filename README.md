@@ -9,5 +9,6 @@
 ![Student Records](images/creating_student_record.png){width: "50%" height: "60%"}
 3. Viewing student records
 ![Viewing Student Records](images/viewing_student_record.png){width: "50%" height: "60%"}
+
 4. Exiting the application
-![Exiting Application](images/exiting_application.png){width: "50%" height: "60%"}
+![Exiting Application](images/exiting_application.png){width: 500px height: 300px}
