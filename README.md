@@ -28,13 +28,12 @@ check that these files are available:
 ### Here are screenshots of how the application works
 
 1. When the main.sh file runs
-![Start Of The Application](images/start_of_program.png)
+   ![Start of application](images/start_of_program.png)
 
-2. Creating student records
-![Student Records](images/creating_student_record.png)
+2. Creating Student Records
+   ![Creation of student records](images/creating_student_record.png)
+3. Viewing Student Records
+   ![Viewing student records](images/viewing_student_record.png)
+4. Exiting The Application
+   ![Exiting application](images/exiting_application.png)
 
-3. Viewing student records
-![Viewing Student Records](images/viewing_student_record.png)
-
-1. Exiting the application
-![Exiting Application](images/exiting_application.png)
