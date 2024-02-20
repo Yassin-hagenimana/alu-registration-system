@@ -3,10 +3,11 @@
 
 1) To install the application on your local machine. Start with this:
 
+On your terminal,
 +  $ git clone https://github.com/Yassin-hagenimana/alu-registration-system.git
 (Kindly ignore the plus sign when copying the text)
 
-2) On your terminal:
+2) Still on your terminal:
 + cd alu-registration-system/negpod_21-q1
 
 3) list your files 
