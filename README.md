@@ -17,7 +17,7 @@ check that these files are available:
 *main.sh
 *select-emails.sh
 
-4)Run the program
+4)To run the program
 
 - ./main.sh
 
