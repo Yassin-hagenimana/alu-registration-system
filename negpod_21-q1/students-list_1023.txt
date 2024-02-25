@@ -13,3 +13,5 @@
 13, manishimwepascaline@gmail.com, 17
 8, d.dushime@alustudent.com, 30
 9, p.mahoro@alustudent.com, 50
+666, m.digne@alustudent.com, 666
+111, dmahe09@alustudent.com
