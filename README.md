@@ -10,7 +10,7 @@ On your terminal,
 2) Still on your terminal:
 + cd alu-registration-system/negpod_21-q1
 
-3) list your files 
+3) List your files 
 + ls
 
 check that these files are available:
